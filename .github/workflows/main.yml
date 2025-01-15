@@ -19,6 +19,5 @@ jobs:
         key: ${{ secrets.MINI_PRIVATE_KEY }}
         port: ${{ secrets.MINI_PORT }}
         script: |
-          echo I am github actions!
           cd ~
           mkdir github-actions
