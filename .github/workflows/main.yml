@@ -17,7 +17,7 @@ jobs:
         host: ${{ secrets.MINI_HOST }}
         username: ${{ secrets.MINI_USERNAME }}
         key: ${{ secrets.MINI_PRIVATE_KEY }}
-        port: ${{ secrets.MINI_PORT }}
+        port: ${{ secrets.MINI_SSH_PORT }}
         script: |
           cd ~
           mkdir github-actions
