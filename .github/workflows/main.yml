@@ -20,4 +20,4 @@ jobs:
         port: ${{ secrets.MINI_SSH_PORT }}
         script: |
           cd ~
-          mkdir github-actions
+          echo "hello"
