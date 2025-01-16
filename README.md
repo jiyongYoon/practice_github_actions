@@ -1,3 +1,5 @@
+[![.github/workflows/main.yml](https://github.com/jiyongYoon/practice_github_actions/actions/workflows/main.yml/badge.svg)](https://github.com/jiyongYoon/practice_github_actions/actions/workflows/main.yml)
+
 # practice_github_actions
 github actions 연습 repo
 
@@ -14,7 +16,6 @@ github actions 연습 repo
 ssh {username}@{host} -p {port}
 password: {입력}
 ```
-- 평문으로 보내기 때문에 권장하지 않음
 
 ### 2. ssh key
 
