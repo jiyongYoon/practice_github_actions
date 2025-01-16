@@ -11,6 +11,20 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+    - name: Create .env file
+      run: |
+        echo "${{ secrets.ENV_FILE_CONTENT }}" > .env
+
+    - name: Deploy '.env' to server
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.MINI_HOST }}
+        username: ${{ secrets.MINI_USERNAME }}
+        key: ${{ secrets.MINI_PRIVATE_KEY }}
+        port: ${{ secrets.MINI_SSH_PORT }}
+        source: ".env"
+        target: /home/jyyoon-mini/
+    
     - name: mini-pc ssh connect
       uses: appleboy/ssh-action@master
       with:
@@ -20,4 +34,4 @@ jobs:
         port: ${{ secrets.MINI_SSH_PORT }}
         script: |
           cd ~
-          echo "hello"
+          cat .env
